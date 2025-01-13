@@ -37,17 +37,45 @@ A modern, responsive website for IQ7 Smart Locks showcasing our innovative secur
 - Social media links
 
 ## Technical Stack
-- React.js with TypeScript
+- React.js (Create React App) with TypeScript
+- React Router DOM for navigation
 - Tailwind CSS for styling
-- Responsive design principles
-- Modern animation effects
+- Framer Motion for animations
+- Hero Icons for UI elements
+- React Slick for carousels
+- Modern responsive design principles
 - SEO optimized structure
 
-## Getting Started
+## Project Structure
+```
+iq7/
+├── public/
+│   ├── images/          # Static images and assets
+│   │   ├── 107logo.png  # Company logo
+│   │   └── ...
+│   └── index.html       # HTML template
+├── src/
+│   ├── components/      # Reusable UI components
+│   │   ├── Footer.tsx
+│   │   ├── Navbar.tsx
+│   │   └── ...
+│   ├── pages/          # Page components
+│   │   ├── Home.tsx    # Main landing page
+│   │   └── ...
+│   ├── index.tsx       # Application entry point
+│   ├── index.css       # Global styles
+│   └── App.tsx         # Root component
+├── package.json        # Dependencies and scripts
+├── tailwind.config.js  # Tailwind CSS configuration
+└── tsconfig.json       # TypeScript configuration
+```
+
+## Setup and Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/iq7-website.git
+git clone https://github.com/yourusername/iq7.git
+cd iq7
 ```
 
 2. Install dependencies:
@@ -55,10 +83,29 @@ git clone https://github.com/yourusername/iq7-website.git
 npm install
 ```
 
-3. Run the development server:
+3. Start the development server:
 ```bash
-npm run dev
+npm start
 ```
+The application will be available at `http://localhost:3000`
+
+4. Build for production:
+```bash
+npm run build
+```
+
+## Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App
+
+## Browser Support
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
