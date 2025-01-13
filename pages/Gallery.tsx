@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from 'next/image';
 
 const products = [
   'IQ030', 'IQ040', 'IQ050', 'IQ060', 'IQ910', 'IQ920'
@@ -45,10 +46,12 @@ const Gallery = () => {
             {products.map((productId) => (
               <div key={productId} className="px-2">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <img
+                  <Image
                     src={`/assets/images/${productId}.jpg`}
                     alt={`Smart Lock ${productId}`}
-                    className="w-full h-64 object-cover"
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover rounded-lg"
                   />
                   <div className="p-4">
                     <h3 className="text-xl font-bold">Smart Lock {productId}</h3>
@@ -63,10 +66,12 @@ const Gallery = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((productId) => (
             <div key={productId} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img
+              <Image
                 src={`/assets/images/${productId}.jpg`}
                 alt={`Smart Lock ${productId}`}
-                className="w-full h-64 object-cover"
+                width={400}
+                height={300}
+                className="w-full h-full object-cover rounded-lg"
               />
               <div className="p-4">
                 <h3 className="text-xl font-bold">Smart Lock {productId}</h3>
