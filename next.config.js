@@ -4,9 +4,6 @@ const nextConfig = {
   swcMinify: true,
   typescript: {
     ignoreBuildErrors: true,
-  },
-  experimental: {
-    appDir: false
   }
 }
 
