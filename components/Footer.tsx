@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -14,7 +15,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <img src="/images/107logo.png" alt="IQ7 Logo" className="h-12" />
+            <Image 
+              src="/images/107logoicon.png"
+              alt="IQ7 Logo"
+              width={120}
+              height={40}
+              className="mb-4"
+            />
             <p className="text-gray-300 leading-relaxed">
               Securing homes with intelligent technology, providing peace of mind through innovation.
             </p>

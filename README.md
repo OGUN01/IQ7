@@ -4,45 +4,49 @@ A modern, responsive website for IQ7 Smart Locks showcasing our innovative secur
 
 ## Features
 
-### Product Showcase
+### Modern Hero Section
+- Full-width hero banner with dynamic content
+- Aesthetic call-to-action buttons with glassmorphism effects
+- Smooth scroll functionality to products section
+- WhatsApp integration for instant contact
+
+### Smart Features Showcase
+- Interactive feature cards with custom SVG icons
+- Modern grid layout with hover animations
+- Product images with WhatsApp integration
+- Responsive design across all devices
+
+### Product Grid
 - Dynamic product filtering (All Products, Drawer Locks, Door Locks)
-- Interactive product cards with hover effects
-- Quick view modal for detailed product information
-- "Explore More Products" card with context-aware messaging
+- Modern product cards with discount displays
+- "Explore More Products" card with WhatsApp integration
+- Smooth animations and transitions
 
-### Hero Section
-- Eye-catching hero banner with product highlights
-- Call-to-action buttons for quick access to key features
-- Modern design with gradient overlays
+### Testimonials Section
+- Dynamic testimonial carousel using Swiper
+- Modern avatar system with initials
+- Star rating display
+- Smooth animations and transitions
 
-### Features Section
-- Highlights key product features with icons
-- Clean, grid-based layout
-- Responsive design for all screen sizes
-
-### About Section
-- Company overview and mission statement
-- Engaging statistics and achievements
-- Professional imagery and layout
-
-### Trusted By Industry Leaders
+### Trusted Partners
 - Showcase of prestigious clients (Indian Oil, OYO)
-- Interactive logo display with zoom animations
-- Trust-building messaging
-- Modern gradient backgrounds
+- Interactive logo display with zoom effects
+- Professional gradient backgrounds
+- Responsive layout
 
 ### Contact Integration
 - WhatsApp integration for instant communication
-- Quick access to customer support
-- Social media links
+- Location map integration
+- Business hours display
+- Modern contact cards with hover effects
 
 ## Technical Stack
-- React.js (Create React App) with TypeScript
-- React Router DOM for navigation
-- Tailwind CSS for styling
-- Framer Motion for animations
-- Hero Icons for UI elements
-- React Slick for carousels
+- Next.js 14 with TypeScript
+- TailwindCSS for modern styling
+- Framer Motion for smooth animations
+- Swiper for modern carousels
+- React Intersection Observer for scroll animations
+- GSAP for advanced animations
 - Modern responsive design principles
 - SEO optimized structure
 
@@ -50,24 +54,20 @@ A modern, responsive website for IQ7 Smart Locks showcasing our innovative secur
 ```
 iq7/
 ├── public/
-│   ├── images/          # Static images and assets
-│   │   ├── 107logo.png  # Company logo
-│   │   └── ...
-│   └── index.html       # HTML template
-├── src/
-│   ├── components/      # Reusable UI components
-│   │   ├── Footer.tsx
-│   │   ├── Navbar.tsx
-│   │   └── ...
-│   ├── pages/          # Page components
-│   │   ├── Home.tsx    # Main landing page
-│   │   └── ...
-│   ├── index.tsx       # Application entry point
-│   ├── index.css       # Global styles
-│   └── App.tsx         # Root component
-├── package.json        # Dependencies and scripts
-├── tailwind.config.js  # Tailwind CSS configuration
-└── tsconfig.json       # TypeScript configuration
+│   └── images/          # Static images and assets
+├── components/         # Reusable UI components
+│   ├── HeroSection.tsx
+│   ├── ProductGrid.tsx
+│   ├── SmartFeatures.tsx
+│   └── ...
+├── pages/             # Next.js pages
+│   ├── _app.tsx
+│   └── index.tsx
+├── styles/           # Global styles
+│   └── globals.css
+├── next.config.js    # Next.js configuration
+├── tailwind.config.js # Tailwind configuration
+└── package.json      # Dependencies and scripts
 ```
 
 ## Setup and Installation
@@ -85,7 +85,7 @@ npm install
 
 3. Start the development server:
 ```bash
-npm start
+npm run dev
 ```
 The application will be available at `http://localhost:3000`
 
@@ -96,10 +96,17 @@ npm run build
 
 ## Available Scripts
 
-- `npm start` - Runs the app in development mode
-- `npm test` - Launches the test runner
+- `npm run dev` - Runs the app in development mode
 - `npm run build` - Builds the app for production
-- `npm run eject` - Ejects from Create React App
+- `npm start` - Starts the production server
+- `npm run lint` - Runs ESLint for code quality
+
+## Deployment
+
+This project is optimized for deployment on Vercel:
+1. Push your code to GitHub
+2. Import your repository on Vercel
+3. Vercel will automatically detect Next.js and deploy
 
 ## Browser Support
 - Chrome (latest)

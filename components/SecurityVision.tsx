@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Image from 'next/image';
 
 const SecurityVision = () => {
   const [ref, inView] = useInView({
@@ -108,9 +109,11 @@ const SecurityVision = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur-xl" />
               <div className="relative bg-white rounded-xl p-6 shadow-xl">
-                <img
+                <Image 
                   src="/images/iq920.png"
                   alt="Smart Lock"
+                  width={600}
+                  height={400}
                   className="w-full h-auto object-contain"
                 />
                 <div className="mt-6 space-y-2">

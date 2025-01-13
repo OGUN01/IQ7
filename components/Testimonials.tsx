@@ -49,7 +49,7 @@ const Testimonials: React.FC<TestimonialProps> = ({ testimonials }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-2">What Our Customers Say</h2>
-          <p className="text-gray-600">Don't just take our word for it. Here's what our satisfied customers have to say about their experience with our smart locks.</p>
+          <p className="text-gray-600">Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say about their experience with our smart locks.</p>
         </div>
         
         <Swiper
@@ -81,7 +81,7 @@ const Testimonials: React.FC<TestimonialProps> = ({ testimonials }) => {
                 </div>
                 <StarRating rating={testimonial.rating} />
                 <blockquote className="mt-4">
-                  <p className="text-gray-600 leading-relaxed">"{testimonial.content}"</p>
+                  <p className="text-gray-600 leading-relaxed">&ldquo;{testimonial.content}&rdquo;</p>
                 </blockquote>
               </motion.div>
             </SwiperSlide>
