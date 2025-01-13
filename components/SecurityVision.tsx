@@ -26,8 +26,12 @@ const SecurityVision = () => {
               variants={fadeInUp}
               className="text-3xl font-bold mb-12"
             >
-              We Want To Improve Your Life's Security & Safety.
+              We Want To Improve Your Life&apos;s Security & Safety.
             </motion.h2>
+
+            <p className="text-gray-600 mb-4">
+              We&apos;re committed to providing innovative security solutions that protect what matters most.
+            </p>
 
             {/* Vision Cards */}
             <div className="space-y-6">
