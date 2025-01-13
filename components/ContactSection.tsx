@@ -19,7 +19,7 @@ const ContactSection = () => {
         >
           <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Have questions about our smart locks? We're here to help. Contact us through any of these channels.
+            Have questions about our smart locks? We&apos;re here to help. Contact us through any of these channels.
           </p>
         </motion.div>
 
