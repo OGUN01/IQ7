@@ -5,13 +5,12 @@ import { motion } from 'framer-motion';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const scrollToProducts = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const productsSection = document.getElementById('products');
-    if (productsSection) {
-      productsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsOpen(false);
+  const scrollToProducts = () => {
+    document.getElementById('products')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const scrollToAbout = () => {
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
@@ -30,7 +29,7 @@ const Navbar = () => {
             <Link href="#products" onClick={scrollToProducts} className="text-gray-700 hover:text-primary transition-colors">
               Products
             </Link>
-            <Link href="#about" className="text-gray-700 hover:text-primary transition-colors">
+            <Link href="#about" onClick={scrollToAbout} className="text-gray-700 hover:text-primary transition-colors">
               About
             </Link>
             <Link href="#contact" className="text-gray-700 hover:text-primary transition-colors">
@@ -86,7 +85,7 @@ const Navbar = () => {
             >
               Products
             </Link>
-            <Link href="#about" className="block py-2 text-gray-700 hover:text-primary">
+            <Link href="#about" onClick={scrollToAbout} className="block py-2 text-gray-700 hover:text-primary">
               About
             </Link>
             <Link href="#contact" className="block py-2 text-gray-700 hover:text-primary">
