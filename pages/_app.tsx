@@ -7,9 +7,12 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <link rel="icon" href="/images/107logoicon.png" />
       </Head>
-      <Component {...pageProps} />
+      <div className="relative w-full overflow-x-hidden">
+        <Component {...pageProps} />
+      </div>
     </>
   )
 }

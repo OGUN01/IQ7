@@ -193,9 +193,9 @@ export default function HomePage() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-white w-full overflow-x-hidden">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow w-full overflow-x-hidden">
         <HeroSection 
           slides={heroSlides} 
         />
