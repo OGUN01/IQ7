@@ -13,6 +13,11 @@ const Navbar = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open('https://wa.me/+919927014543', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 shadow-sm">
       <div className="container mx-auto px-4">
@@ -32,9 +37,9 @@ const Navbar = () => {
             <Link href="#about" onClick={scrollToAbout} className="text-gray-700 hover:text-primary transition-colors">
               About
             </Link>
-            <Link href="#contact" className="text-gray-700 hover:text-primary transition-colors">
+            <button onClick={handleContactClick} className="text-gray-700 hover:text-primary transition-colors">
               Contact
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -88,9 +93,9 @@ const Navbar = () => {
             <Link href="#about" onClick={scrollToAbout} className="block py-2 text-gray-700 hover:text-primary">
               About
             </Link>
-            <Link href="#contact" className="block py-2 text-gray-700 hover:text-primary">
+            <button onClick={handleContactClick} className="block w-full text-left py-2 text-gray-700 hover:text-primary">
               Contact
-            </Link>
+            </button>
           </motion.div>
         )}
       </div>

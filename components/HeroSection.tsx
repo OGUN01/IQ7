@@ -33,7 +33,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ slides }) => {
 
   return (
     <>
-      <section className="relative h-screen bg-gray-900">
+      <section className="relative h-screen bg-gray-900 w-full overflow-hidden">
         <Swiper
           modules={[Autoplay, EffectFade, Pagination]}
           effect="fade"
@@ -48,20 +48,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({ slides }) => {
             },
           }}
           loop={true}
-          className="h-full"
+          className="h-full w-full"
         >
           {slides.map((slide, index) => (
-            <SwiperSlide key={index} className="relative">
-              <div className="absolute inset-0">
+            <SwiperSlide key={index} className="relative w-full">
+              <div className="absolute inset-0 w-full">
                 {/* Desktop Image */}
-                <div className="hidden sm:block absolute inset-0">
+                <div className="hidden sm:block absolute inset-0 w-full">
                   <Image
                     src={slide.image}
                     alt="Hero Image"
                     layout="fill"
                     objectFit="cover"
                     priority={index === 0}
-                    className="brightness-75"
+                    className="brightness-75 w-full"
                     sizes="100vw"
                     quality={90}
                     style={{
@@ -71,14 +71,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ slides }) => {
                 </div>
                 
                 {/* Mobile Image */}
-                <div className="block sm:hidden absolute inset-0">
+                <div className="block sm:hidden absolute inset-0 w-full">
                   <Image
                     src={slide.image}
                     alt="Hero Image"
                     layout="fill"
                     objectFit="contain"
                     priority={index === 0}
-                    className="brightness-75"
+                    className="brightness-75 w-full"
                     sizes="100vw"
                     quality={90}
                   />
@@ -139,9 +139,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ slides }) => {
       </section>
 
       {/* Mobile Action Buttons */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-[100] bg-white py-4 px-4 shadow-lg">
-        <div className="container mx-auto">
-          <div className="flex flex-col gap-3 max-w-md mx-auto">
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-[100] bg-white py-4 px-4 shadow-lg w-full">
+        <div className="w-full max-w-md mx-auto">
+          <div className="flex flex-col gap-3">
             <motion.button
               onClick={handleExploreClick}
               type="button"
@@ -188,7 +188,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ slides }) => {
       </div>
 
       {/* Add padding at the bottom to account for fixed buttons */}
-      <div className="sm:hidden h-32"></div>
+      <div className="sm:hidden h-32 w-full"></div>
     </>
   );
 };
